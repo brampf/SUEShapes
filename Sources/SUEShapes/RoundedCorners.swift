@@ -46,6 +46,21 @@ public struct RoundedCorners : View {
     var border : CGFloat = 4
     var padding : CGFloat?
     
+    public init(hue: Double, part: Segment, type: Type = .regular){
+        self.hue = hue
+        self.part = part
+        self.type = type
+    }
+    
+    public init(hue: Double, part: Segment, type: Type = .regular, radius: CGFloat = 15, border: CGFloat, padding: CGFloat? = nil){
+        self.hue = hue
+        self.part = part
+        self.type = type
+        self.radius = radius
+        self.border = border
+        self.padding = padding
+    }
+    
     @ViewBuilder public var body : some View {
         
         switch part {
